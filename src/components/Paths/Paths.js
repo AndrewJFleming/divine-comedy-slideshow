@@ -42,7 +42,7 @@ class Paths extends Component {
 
         return (
             <div className="Paths">
-                <h1>Dante Algieri's Divine Comedy</h1>
+                <h1>Dante Alighieri's Divine Comedy</h1>
                 <div className="innerDiv">
                     {paths}
                 </div>

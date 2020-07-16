@@ -8,7 +8,7 @@ class App extends Component {
   
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={'/divine-comedy-slideshow'}>
         <div className="App">
           <Home />
         </div>
