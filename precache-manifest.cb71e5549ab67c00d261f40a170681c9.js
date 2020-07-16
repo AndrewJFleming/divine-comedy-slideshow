@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e76ddafd4e8cfaea1cc922798b1f4af",
+    "revision": "92b6c9f52a21495bf10388471b36f98f",
     "url": "/divine-comedy-slideshow/index.html"
   },
   {
-    "revision": "c32e09c2ae7f749f06ea",
+    "revision": "54fc92b78d045668a39b",
     "url": "/divine-comedy-slideshow/static/css/main.451254bc.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/divine-comedy-slideshow/static/js/2.44fc6a60.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c32e09c2ae7f749f06ea",
-    "url": "/divine-comedy-slideshow/static/js/main.5b4e7139.chunk.js"
+    "revision": "54fc92b78d045668a39b",
+    "url": "/divine-comedy-slideshow/static/js/main.1c7d5d56.chunk.js"
   },
   {
     "revision": "a2767b708b31baddee07",
