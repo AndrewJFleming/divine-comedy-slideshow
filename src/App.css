@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  
+  background: 
+  linear-gradient(
+    rgba(18, 18, 24, 0.90), 
+    rgba(38, 38, 54, 0.85)
+  ),
+  url("https://divine-comedy-images.s3-us-west-2.amazonaws.com/paradise-lost-BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

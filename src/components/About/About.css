@@ -1,0 +1,7 @@
+.description h1, 
+.description p {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin: 15px 200px;
+}

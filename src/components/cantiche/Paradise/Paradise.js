@@ -1,0 +1,64 @@
+import React, {Component} from 'react';
+import '../Cantiche.scss';
+
+import Card from '../Card/Card';
+import data from '../../../data/data';
+
+class Paradise extends Component {
+        state = {
+          book: data.paradise,
+          slide: data.paradise[0]
+        }
+      
+        prevSlide = () => {
+          const newIndex = this.state.slide.index-1;
+          this.setState({
+            slide: data.paradise[newIndex]
+          })
+        }
+
+      nextSlide = () => {
+        const newIndex = this.state.slide.index+1;
+        this.setState({
+          slide: data.paradise[newIndex]
+        })
+      }
+
+    render () {
+        const {slide} = this.state;
+
+        let cards = (
+          <div className="page">
+            <div className={`cards-slider active-slide-${slide.index}`} >
+              <div className="cards-slider-wrapper" style={{
+                'transform': `translateX(-${slide.index*(100/this.state.book.length)}%)`
+              }}>
+                {
+                  this.state.book.map(slide => <Card key={slide._id} slide={slide} />)
+                }
+              </div>
+            </div>
+          </div>
+        )
+
+        return (
+            <div className="card-container">
+              <h1>Paradise</h1>
+              <div className="buttons">
+                <button 
+                  onClick={() => this.prevSlide()} 
+                  disabled={slide.index === 0}
+                >Prev</button>
+                <button 
+                  onClick={() => this.nextSlide()} 
+                  disabled={slide.index === data.paradise.length-1}
+                >Next</button>
+              </div>           
+              {cards}
+          </div>
+        );
+    }
+}
+
+export default Paradise;
+

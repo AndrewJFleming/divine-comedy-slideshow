@@ -1,0 +1,31 @@
+.Paths {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 50px 0 50px;
+    color: #ffffff;
+}
+
+.Paths h1 {
+    margin: -25px 0 30px 0;
+}
+
+.Paths a {
+    text-decoration: none;
+    color: rgb(24, 0, 129);
+}
+
+.Paths a:hover,
+.Paths a:active {
+    color: #772800;
+}
+
+.innerDiv {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+
+.info {
+    margin-top: 60px;
+    color: #ddd;
+}
