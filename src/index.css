@@ -1,10 +1,24 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  height: 100%;
+  
+  /* prevent scroll on cantiche pages */
+  overflow-x: hidden;
+  
+  /* background image settings */
+  background: url("https://divine-comedy-images.s3-us-west-2.amazonaws.com/death.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-y: center;
 }
 
-h1, h2 {
+h1, 
+h2 {
   font-family: 'Grenze Gotisch', cursive;
 }

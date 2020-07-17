@@ -1,21 +1,21 @@
-.Paths {
+.CanticheCards {
     box-sizing: border-box;
     width: 100%;
     padding: 0 50px 0 50px;
     color: #ffffff;
 }
 
-.Paths h1 {
-    margin: -25px 0 30px 0;
+.CanticheCards h1 {
+    margin: -25px 5vw 30px 5vw;
 }
 
-.Paths a {
+.CanticheCards a {
     text-decoration: none;
     color: rgb(24, 0, 129);
 }
 
-.Paths a:hover,
-.Paths a:active {
+.CanticheCards a:hover,
+.CanticheCards a:active {
     color: #772800;
 }
 
@@ -26,6 +26,12 @@
 }
 
 .info {
-    margin-top: 60px;
+    margin: 60px 5vw 0 5vw;
     color: #ddd;
 }
+
+@media screen and (max-width: 900px) {
+    .CanticheCards {
+       padding: 0 2vw 0 2vw;
+    }
+ }

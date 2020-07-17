@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import './Paths.css';
+import './CanticheCards.css';
 
-import Path from './Path/Path';
+import CanticheCard from './CanticheCard/CanticheCard';
 
-class Paths extends Component {
+class CanticheCards extends Component {
     state = {
-        paths: [
+        canticheCards: [
             { name: 'Inferno', 
             imgId: 'infImg', 
             src: "https://divine-comedy-images.s3-us-west-2.amazonaws.com/William-Blake-Inferno.jpg", 
@@ -26,25 +26,25 @@ class Paths extends Component {
     }
 
     render () {
-        let paths = (
-                    this.state.paths.map(path => {
+        let canticheCards = (
+                    this.state.canticheCards.map(canticheCard => {
                         return (
-                            <Link to={path.link}>
-                                <Path
-                                    name={path.name}
-                                    imgId={path.imgId}
-                                    src={path.src}
-                                    alt={path.alt}/>
+                            <Link to={canticheCard.link}>
+                                <CanticheCard
+                                    name={canticheCard.name}
+                                    imgId={canticheCard.imgId}
+                                    src={canticheCard.src}
+                                    alt={canticheCard.alt}/>
                             </Link>)
                         })
                     
         )
 
         return (
-            <div className="Paths">
-                <h1>Dante Alighieri's Divine Comedy</h1>
+            <div className="CanticheCards">
+                <h1 className="siteTitle">Dante Alighieri's Divine Comedy</h1>
                 <div className="innerDiv">
-                    {paths}
+                    {canticheCards}
                 </div>
                 <div className="info">
                     <h3>Welcome to the Divine Comedy Slideshow Project</h3>
@@ -55,4 +55,4 @@ class Paths extends Component {
     }
 }
 
-export default withRouter(Paths);
+export default withRouter(CanticheCards);

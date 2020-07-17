@@ -1,0 +1,45 @@
+.figDiv {
+   background-color: #fffae0;
+   text-shadow: 1px 1px white;
+   border-radius: 10px;
+   box-shadow: 7px 6px 7px rgba(0, 0, 0, 0.7);
+   width: 65%;
+   display: inline-block;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px 20px 5px 20px;
+   overflow: hidden;
+}
+   
+figure {
+   border: 1px solid black;
+   width:100%;
+   overflow: hidden;
+   margin:0;
+}
+
+figure img{
+   display: block;
+   width:100%;
+}
+
+@media screen and (max-width: 600px) {
+   .figDiv h2 {
+      font-size: 1.2em;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .figDiv {
+      padding: 12px 12px 5px 12px;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .figDiv {
+      padding: 10px 10px 5px 10px;
+   }
+   .figDiv h2 {
+      font-size: 1em;
+   }
+}

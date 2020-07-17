@@ -1,7 +1,7 @@
 import React from 'react';
-import './Path.css';
+import './CanticheCard.css';
 
-const path = (props) => (
+const canticheCard = (props) => (
     <div className="figDiv">
         <figure>
             <img id={props.imgId} src={props.src} alt={props.alt}/>
@@ -10,4 +10,4 @@ const path = (props) => (
     </div>
 );
 
-export default path;
+export default canticheCard;

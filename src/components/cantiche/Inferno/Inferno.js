@@ -29,7 +29,6 @@ class Inferno extends Component {
         const {slide} = this.state;
 
         let cards = (
-          <div className="page">
             <div className={`cards-slider active-slide-${slide.index}`} >
               <div className="cards-slider-wrapper" style={{
                 'transform': `translateX(-${slide.index*(100/this.state.book.length)}%)`
@@ -39,7 +38,6 @@ class Inferno extends Component {
                 }
               </div>
             </div>
-          </div>
         )
 
         return (
