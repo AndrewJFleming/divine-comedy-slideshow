@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/divine-comedy-slideshow/precache-manifest.cb71e5549ab67c00d261f40a170681c9.js"
+  "/divine-comedy-slideshow/precache-manifest.49db2d461cc5059ef6f58370afd413e2.js"
 );
 
 self.addEventListener('message', (event) => {
