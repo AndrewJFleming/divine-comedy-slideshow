@@ -1,0 +1,3 @@
+Optimise BG image.
+Scroll for overflow-y on small screens. Cantiche image cards are cut-off, even after adding size adjustments in media-queries, because of browser UI.
+Adjust cantiche image sizing code to accomidate landscapes in addition to portraits.

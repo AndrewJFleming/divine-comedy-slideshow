@@ -10,6 +10,10 @@ class Purgatory extends Component {
           slide: data.purgatory[0]
         }
       
+        componentDidMount = () => {
+          window.addEventListener('keydown', this.handleKeyDown);
+        }
+
         prevSlide = () => {
           const newIndex = this.state.slide.index-1;
           this.setState({
@@ -22,6 +26,18 @@ class Purgatory extends Component {
         this.setState({
           slide: data.purgatory[newIndex]
         })
+      }
+
+      handleKeyDown = (event) => {
+        if(event.keyCode === 39 && this.state.slide.index !== data.purgatory.length-1 ){
+          this.nextSlide();
+        } else if(event.keyCode === 37 && this.state.slide.index !== 0){
+          this.prevSlide();
+        }
+      }
+
+      componentWillUnmount = () => {
+        window.removeEventListener('keydown', this.handleKeyDown);
       }
 
     render () {
@@ -44,7 +60,7 @@ class Purgatory extends Component {
         return (
             <div className="card-container">
               <h1>Purgatory</h1>
-              <div className="buttons">
+              <div className="buttons" onKeyDown={this.handleKeyDown}>
                 <button 
                   onClick={() => this.prevSlide()} 
                   disabled={slide.index === 0}

@@ -10,6 +10,10 @@ class Paradise extends Component {
           slide: data.paradise[0]
         }
       
+        componentDidMount = () => {
+          window.addEventListener('keydown', this.handleKeyDown);
+        }
+
         prevSlide = () => {
           const newIndex = this.state.slide.index-1;
           this.setState({
@@ -22,6 +26,18 @@ class Paradise extends Component {
         this.setState({
           slide: data.paradise[newIndex]
         })
+      }
+
+      handleKeyDown = (event) => {
+        if(event.keyCode === 39 && this.state.slide.index !== data.paradise.length-1 ){
+          this.nextSlide();
+        } else if(event.keyCode === 37 && this.state.slide.index !== 0){
+          this.prevSlide();
+        }
+      }
+
+      componentWillUnmount = () => {
+        window.removeEventListener('keydown', this.handleKeyDown);
       }
 
     render () {
@@ -44,7 +60,7 @@ class Paradise extends Component {
         return (
             <div className="card-container">
               <h1>Paradise</h1>
-              <div className="buttons">
+              <div className="buttons" onKeyDown={this.handleKeyDown}>
                 <button 
                   onClick={() => this.prevSlide()} 
                   disabled={slide.index === 0}
